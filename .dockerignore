@@ -6,6 +6,12 @@ yarn-error.log*
 pnpm-debug.log*
 .pnpm-store
 
+# Lock files (not used, building from package.json)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+bun.lock
+
 # Build output
 .next
 out
