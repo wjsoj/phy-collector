@@ -52,6 +52,7 @@ export default function VditorEditor({
           theme: currentTheme === 'dark' ? 'dark' : 'classic',
           mode: 'ir',
           cache: { enable: false },
+          cdn: '/vditor',
           toolbar: [
             'emoji',
             'headings',
