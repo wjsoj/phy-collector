@@ -9,7 +9,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header with shader gradient */}
-      <header className="relative w-full overflow-hidden">
+      <div className="relative w-full overflow-hidden min-h-[300px]">
         <MeshGradient
           colors={['#5b00ff', '#00ffa3', '#ff9a00', '#ea00ff']}
           swirl={0.55}
@@ -18,26 +18,28 @@ export default function HomePage() {
           style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
         />
         <Dithering
-          colorBack="#ffffff"
-          colorFront="#eaeaea"
-          shape="simplex"
-          speed={0.1}
-          style={{ position: 'absolute', inset: 0, width: '100%', height: '100%' }}
+          {...{
+            colors: ['#ffffff', '#f2f2f2', '#eaeaea'],
+            intensity: 0.18,
+            shape: 'simplex',
+            style: { position: 'absolute', inset: 0, width: '100%', height: '100%' }
+          } as any}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/30" />
 
-        <div className="relative max-w-7xl mx-auto px-4 py-12 text-left">
+        <div className="relative container mx-auto px-4 py-12 text-left">
           <div className="flex flex-col gap-3">
             <h1 className="text-4xl font-semibold text-white leading-snug">
               Question Collection
-              <br />& Submission Platform
+              <br />
+              & Submission Platform
             </h1>
             <p className="text-white/80 text-sm font-medium">
               Submit and manage educational questions with markdown support
             </p>
           </div>
         </div>
-      </header>
+      </div>
 
       {/* Main Content */}
       <main className="max-w-7xl mx-auto py-8 px-4">
