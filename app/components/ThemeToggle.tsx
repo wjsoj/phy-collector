@@ -15,7 +15,7 @@ export function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <Button variant="soft" size="sm" isDisabled>
+      <Button variant="ghost" size="sm" isDisabled>
         <span className="w-4 h-4" />
       </Button>
     );
@@ -25,7 +25,7 @@ export function ThemeToggle() {
 
   return (
     <Button
-      variant="soft"
+      variant="ghost"
       size="sm"
       onPress={() => setTheme(isDark ? 'light' : 'dark')}
       className="transition-all duration-300"

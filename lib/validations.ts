@@ -13,7 +13,7 @@ export const questionSchema = z.object({
     .min(1, 'Solution is required')
     .max(50000, 'Solution is too long (max 50,000 characters)'),
   answer: z.enum(['A', 'B', 'C', 'D'], {
-    errorMap: () => ({ message: 'Answer must be A, B, C, or D' }),
+    message: 'Answer must be A, B, C, or D',
   }),
   tags: z
     .array(z.string().min(1).max(50))
